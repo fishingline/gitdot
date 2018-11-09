@@ -2,7 +2,7 @@
 
 G-dot git functions for fish to make common or complicated git operations easier to achieve
 
-# examples
+## Examples
 
 ```shell
 # show the current git user
@@ -13,4 +13,20 @@ g.log
 g.log-pretty
 
 # and a whole lot more...
+```
+
+## Install
+
+Fisher:
+
+```shell
+# fisher installation
+fisher add https://github.com/mattmc3/fish-gitdot
+```
+
+OMF:
+
+```shell
+# oh-my-fish installation
+omf install https://github.com/mattmc3/fish-gitdot
 ```
