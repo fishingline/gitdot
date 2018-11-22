@@ -41,9 +41,14 @@ function g.clone --description 'Clones a repo'
 			set repo_parts[2] "https://$repo_parts[2]/"
 	end
 
-	# .git suffix
-	string match -q -- "*.git" $repo_parts[4] ;or set repo_parts[4] "$repo_parts[4].git"
+	# remove .git suffix
+	set repo_parts[4] (string replace -i -r '\.git$' '' $repo_parts[4])
 
-	# echo "git clone $repo_parts[2]$repo_parts[3]/$repo_parts[4] $argv[2..-1]"
-	git clone $repo_parts[2]$repo_parts[3]/$repo_parts[4] $argv[2..-1]
+	# echo "git clone $repo_parts[2]$repo_parts[3]/$repo_parts[4].git $argv[2..-1]"
+	git clone $repo_parts[2]$repo_parts[3]/$repo_parts[4].git $argv[2..-1]
+	if [ -d $argv[2] ]
+		cd $argv[2]
+	else if [ -d $repo_parts[4] ]
+		cd $repo_parts[4]
+	end
 end
