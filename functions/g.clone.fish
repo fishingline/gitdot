@@ -46,7 +46,7 @@ function g.clone --description 'Clones a repo'
 
 	# echo "git clone $repo_parts[2]$repo_parts[3]/$repo_parts[4].git $argv[2..-1]"
 	git clone $repo_parts[2]$repo_parts[3]/$repo_parts[4].git $argv[2..-1]
-	if [ -d $argv[2] ]
+	if test (count $argv) -ge 2; and [ -d $argv[2] ]
 		cd $argv[2]
 	else if [ -d $repo_parts[4] ]
 		cd $repo_parts[4]
