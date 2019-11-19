@@ -1,4 +1,4 @@
-function g.add-remote --description 'Add secondary pushurl remote to existing repo'
+function g.add-remote -d 'Add secondary pushurl remote to existing repo'
     set new_remote $argv
     set cur_remote (git config --get remote.origin.url)
 

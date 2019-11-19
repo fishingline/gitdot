@@ -1,3 +1,3 @@
-function g.cod --description 'Git checkout develop branch'
+function g.cod -d 'Git checkout develop branch'
     git checkout develop
 end

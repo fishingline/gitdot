@@ -1,3 +1,3 @@
-function g.unstage --description 'Unstage current files'
+function g.unstage -d 'Unstage current files'
     git reset -- $argv
 end

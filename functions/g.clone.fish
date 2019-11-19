@@ -1,4 +1,4 @@
-function g.clone --description 'Clones a repo'
+function g.clone -d 'Clones a repo'
     set usage "usage - g.clone <protocol?>/<url?>/<user?>/<repo> <rest>..."
     if [ -z "$argv" ]
         echo "Missing argument: " >&2
