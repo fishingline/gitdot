@@ -8,8 +8,12 @@ function g.url -d 'Creates a git URL'
         return
     end
 
+    if not set -q DEFAULT_GIT_SERVER
+        set -g DEFAULT_GIT_SERVER "github.com"
+    end
+
     set -q _flag_p && set protocol $_flag_p || set protocol "git"
-    set -q _flag_s && set server $_flag_s || set server "github.com"
+    set -q _flag_s && set server $_flag_s || set server $DEFAULT_GIT_SERVER
     set -q _flag_u && set user $_flag_u || set user (git config user.name)
     set -q _flag_r && set repo $_flag_r || set repo $argv
 
