@@ -44,6 +44,7 @@ function g.url -d 'Creates a git URL'
 
     # remove .git suffix
     set repo (string replace -i -r '\.git$' '' $repo)
+    [ -n "$repo" ] || set repo "your-repo-name-here"
 
     echo "$url$user/$repo.git"
 end
