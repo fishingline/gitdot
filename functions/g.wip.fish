@@ -1,4 +1,3 @@
-function g.wip -d 'Add a Work In Process (WIP) commit'
-    git add .
-    and git commit -am 'WIP'
+function g.wip -d 'Add a work-in-progress (WIP) commit'
+    git add . && git commit -am 'WIP'
 end
