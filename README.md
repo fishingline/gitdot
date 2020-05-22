@@ -1,4 +1,4 @@
-# fish-gitdot
+# gitdot
 
 G-dot git functions for fish to make common or complicated git operations easier to achieve
 
@@ -28,16 +28,8 @@ g.clone fish-gitdot ~/code/github.com/mattmc3/fish-gitdot
 
 ## Install
 
-Fisher:
+fisher installation:
 
 ```shell
-# fisher installation
-fisher add https://github.com/mattmc3/fish-gitdot
-```
-
-OMF:
-
-```shell
-# oh-my-fish installation
-omf install https://github.com/mattmc3/fish-gitdot
+fisher add fishingline/gitdot
 ```
