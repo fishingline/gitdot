@@ -1,13 +1,12 @@
-# makefile
-.PHONY: help formatted
+.PHONY: help pretty
 .DEFAULT_GOAL := help
 
-formatted:
-	fish -c 'for f in ./functions/*.fish; fish_indent -w "$$f"; end'
+pretty:
+	fish -c 'for f in ./**/*.fish; fish_indent -w "$$f"; end'
 
 help:
 	@echo "help"
 	@echo "    shows this message"
 	@echo ""
-	@echo "submodules"
-	@echo "    Update git submodules. "
+	@echo "pretty"
+	@echo "    Run fish_indent against all fish files. "
