@@ -1,3 +1,3 @@
-function g.cm -d 'Commits to the repo with a message'
-    git commit -am "$argv"
+function g.cm -d 'Git checkout master branch'
+    git checkout master
 end

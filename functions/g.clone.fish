@@ -19,12 +19,9 @@ function g.clone -d 'Clones a repo'
     end
 
     # fill out repo_parts to 4 elements: ie: git github.com mattmc3 fish-gitdot
-    test (count $repo_parts) -gt 2
-    or set repo_parts $GIT_DEFAULT_USERNAME $repo_parts
-    test (count $repo_parts) -gt 3
-    or set repo_parts $GIT_DEFAULT_URL $repo_parts
-    test (count $repo_parts) -eq 4
-    or set repo_parts "ssh" $repo_parts
+    test (count $repo_parts) -gt 2; or set repo_parts $GIT_DEFAULT_USERNAME $repo_parts
+    test (count $repo_parts) -gt 3; or set repo_parts $GIT_DEFAULT_URL $repo_parts
+    test (count $repo_parts) -eq 4; or set repo_parts "ssh" $repo_parts
 
     # expand abbreviations
     switch $repo_parts[2]
