@@ -14,14 +14,14 @@ g.log-pretty
 
 # Who likes remembering how to make a whole git clone URL?
 # set -xg GIT_DEFAULT_URL "github.com"
-# set -xg GIT_DEFAULT_USERNAME "mattmc3"
-g.clone fish-gitdot
+# set -xg GIT_DEFAULT_USERNAME "fishingline"
+g.clone gitdot
 # or another user
 g.clone fish-shell/fish-shell
 # or another git hosting provider
 g.clone gitlab.com/BVollmerhaus/fish-some-chars
 # or another destination
-g.clone fish-gitdot ~/code/github.com/mattmc3/fish-gitdot
+g.clone fish-gitdot ~/code/github.com/fishingline/gitdot
 
 # and a whole lot more...
 ```
